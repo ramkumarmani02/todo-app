@@ -1,0 +1,55 @@
+.todo-app {
+    border: 2px solid #333;
+    font-family: sans-serif;
+    margin: auto;
+    padding: 1rem;
+    width: 1400px;
+  }
+  
+  /** add todo **/
+  .add-todo {
+    margin-left: 0.5rem;
+  }
+  
+  .todo-app input {
+    height: 1.5rem;
+    font-size: 1.25rem;
+    width: 15rem;
+  }
+
+  .todo-app button {
+    height: 1.5rem;
+  }
+
+  /** todo list **/
+  .todo-list {
+    margin-top: 1rem;
+    text-align: left;
+    list-style: none;
+  }
+  
+  /** todo item **/
+  .todo-item {
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    line-height: 1.5;
+    list-style: disc;
+  }
+  .todo-item__text {
+    font-size: 1.25rem;
+  }
+  .todo-item__text--completed {
+    text-decoration: line-through;
+    color: lightgray;
+  }
+  
+  /** visibility filters **/
+  .filter {
+    padding: 0.3rem 0;
+    margin: 0 0.3rem;
+    cursor: pointer;
+  }
+  .filter--active {
+    border-bottom: 1px solid black;
+  }
+  
