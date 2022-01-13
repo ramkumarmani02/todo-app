@@ -31,16 +31,21 @@
   /** todo item **/
   .todo-item {
     font-family: Arial, Helvetica, sans-serif;
-    cursor: pointer;
     line-height: 1.5;
-    list-style: disc;
+    list-style: none;
+    padding: .5rem .25rem;
+    border-bottom: 1px solid #eee;
+  }
+  .todo-item:hover {
+    background-color: #f7f7f7;
+    cursor: pointer;
   }
   .todo-item__text {
     font-size: 1.25rem;
   }
   .todo-item__text--completed {
     text-decoration: line-through;
-    color: lightgray;
+    color: #333;
   }
   
   /** visibility filters **/
@@ -50,6 +55,7 @@
     cursor: pointer;
   }
   .filter--active {
+    font-weight: bold;
     border-bottom: 1px solid black;
   }
   

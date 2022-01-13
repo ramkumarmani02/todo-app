@@ -13,8 +13,18 @@ class AddTodo extends React.Component {
   };
 
   handleAddTodo = () => {
-    this.props.addTodo(this.state.input);
-    this.setState({ input: "" });
+    if (this.state.input !== "") {
+      this.props.addTodo(this.state.input);
+      this.setState({ input: "" });
+    }
+  };
+
+  onChangeBox = input => {
+    this.setState(({ input }) => ({
+      input: input.map(el =>
+        el.id === input.id ? { ...el, done: !el.done } : el
+      )
+    }));
   };
 
   render() {
@@ -25,7 +35,7 @@ class AddTodo extends React.Component {
           value={this.state.input}
         />
         <button className="add-todo" onClick={this.handleAddTodo}>
-          Add Todo
+          Add
         </button>
       </div>
     );
